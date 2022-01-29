@@ -9,7 +9,7 @@ public class MainMenuButtons1 : MonoBehaviour
     public bool isQuit;
 
 	// Start is called before the first frame update
-	void OnMouseUp()
+	public void OnMouseUp()
 	{
 		if (isStart)
 		{

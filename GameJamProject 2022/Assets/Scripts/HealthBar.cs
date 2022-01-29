@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthBar : MonoBehaviour
 {
@@ -38,6 +39,18 @@ public class HealthBar : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
+        }
+
+        // If player is at no health, then the player dies and triggers a failed screen for level 1
+        if (health == 0 && SceneManager.GetActiveScene().name == "Scene1")
+        {
+            SceneManager.LoadScene("FailedLevel1");
+        }
+
+        // If player is at no health, then the player dies and triggers a failed screen for level 2
+        if (health == 0 && SceneManager.GetActiveScene().name == "Scene2")
+        {
+            SceneManager.LoadScene("FailedLevel2");
         }
     }
 

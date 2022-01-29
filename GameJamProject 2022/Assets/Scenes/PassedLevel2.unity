@@ -203,7 +203,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 87316239}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 87316241}
+        m_MethodName: OnMouseUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &87316239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -821,7 +832,7 @@ GameObject:
   - component: {fileID: 1735887819}
   - component: {fileID: 1735887818}
   m_Layer: 5
-  m_Name: Main Menu Text
+  m_Name: FinishedText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -843,8 +854,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.82, y: 116.6}
-  m_SizeDelta: {x: 476.53, y: 122.08}
+  m_AnchoredPosition: {x: 29, y: 124}
+  m_SizeDelta: {x: 800, y: 117.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1735887818
 MonoBehaviour:
@@ -877,7 +888,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You passed the level. Progress to the next level!
+  m_Text: Congratulations! You completed the game and are free to replay level 1 or
+    level 2!
 --- !u!222 &1735887819
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -982,7 +994,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1773299362}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1773299360}
+        m_MethodName: OnMouseUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1773299362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1101,7 +1124,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2038971036}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2038971038}
+        m_MethodName: OnMouseUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2038971036
 MonoBehaviour:
   m_ObjectHideFlags: 0

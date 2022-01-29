@@ -5,7 +5,43 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
-    public Slider slider;
+    public int health;
+    public int numberOfHearts;
+
+    public Image[] hearts;
+    public Sprite fullHealth;
+    public Sprite noHealth;
+
+    void Update()
+    {
+        if (health > numberOfHearts)
+        {
+            health = numberOfHearts;
+        }
+
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if(i < health)
+            {
+                hearts[i].sprite = fullHealth;
+            }
+            else
+            {
+                hearts[i].sprite = noHealth;
+            }
+
+            if (i < numberOfHearts)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
+        }
+    }
+
+    /*public Slider slider;
 
     public Gradient healthGradient;
     public Image fill;
@@ -23,5 +59,5 @@ public class HealthBar : MonoBehaviour
         slider.value = health;
 
         fill.color = healthGradient.Evaluate(slider.normalizedValue);
-    }
+    } */
 }

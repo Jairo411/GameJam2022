@@ -86,10 +86,25 @@ public class PlayController : MonoBehaviour
             dirVector = new Vector3(Velocity.x, Velocity.y, 0.0f);
             gameObject.transform.position += dirVector * Time.deltaTime;
         }
-       
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            GetComponent<Animator>().Play("attack1");
+        }
+        if (Input.GetKey(KeyCode.Mouse1))
+        {
+            GetComponent<Animator>().Play("Bow1");
+            SimulatePush();
+        }
     }
 
-    //If is ground is false the have this code running
+    void SimulatePush()
+    {
+        float push = 1.0f;
+        float opposite = dirVector.x * -1.0f;
+        SimulateInstantHorizontalAcceleration(0.3f);
+        float horizontalSpeed = (0.25f + horizontalAcceleration);
+    }
+
     void UpdateJumpVector()
     {
         verticalAcceleration = 1.0f;
